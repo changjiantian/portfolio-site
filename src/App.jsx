@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform, useInView, AnimatePresence } from 'fra
 import './App.css'
 import BorderGlow from './BorderGlow'
 
+const B = import.meta.env.BASE_URL  // '/portfolio-site/' on GitHub Pages
+
 /* --- Scroll-triggered fade-in --- */
 function FadeIn({ children, delay = 0, className = '', y = 40 }) {
   const ref = useRef(null)
@@ -225,19 +227,19 @@ function Projects() {
         '\u79fb\u52a8\u7aef H5 \u4e0e\u540e\u53f0\u7ba1\u7406\u7cfb\u7edf\u7684\u4f53\u9a8c\u4e00\u81f4\u6027\u8bbe\u8ba1',
         '\u670d\u52a1\u8986\u76d6\u5168\u56fd\u591a\u7701\u4efd\uff0c\u6210\u4e3a\u519c\u4e1a\u6570\u5b57\u5316\u6807\u6746',
       ],
-      img: '/works/quannongma-cover.jpg',
+      img: `${B}works/quannongma-cover.jpg`,
       color: '#1a3a5c',
       gallery: [
-        { src: '/works/quannongma/homepage.jpg', label: '\u5168\u519c\u7801\u7ba1\u7406\u5e73\u53f0\u9996\u9875' },
-        { src: '/works/quannongma/data-cockpit.jpg', label: '\u5168\u519c\u7801\u5927\u6570\u636e\u9a7e\u9a76\u8231' },
-        { src: '/works/quannongma/map-overview.jpg', label: '\u5168\u56fd\u8d4b\u7801\u5730\u56fe\u6982\u89c8' },
-        { src: '/works/quannongma/app-service.jpg', label: '\u5e94\u7528\u670d\u52a1\u76d1\u63a7\u5e73\u53f0' },
-        { src: '/works/quannongma/data-resources.jpg', label: '\u6570\u636e\u8d44\u6e90\u4f53\u7cfb' },
-        { src: '/works/quannongma/digital-identity.jpg', label: '\u5173\u8054\u5206\u6790\u56fe\u8c31' },
-        { src: '/works/quannongma/gender-distribution.jpg', label: '\u4eba\u5458\u57fa\u7840\u5e93\u6027\u522b\u5206\u5e03' },
-        { src: '/works/quannongma/data-source-analysis.jpg', label: '\u4eba\u5458\u57fa\u7840\u5e93\u6570\u636e\u6765\u6e90\u5206\u6790' },
-        { src: '/works/quannongma/farm-analysis.jpg', label: '\u5bb6\u5ead\u519c\u573a\u4e3b\u5173\u8054\u5206\u6790' },
-        { src: '/works/quannongma/data-governance.jpg', label: '\u6570\u636e\u6cbb\u7406\u5e73\u53f0' },
+        { src: `${B}works/quannongma/homepage.jpg`, label: '\u5168\u519c\u7801\u7ba1\u7406\u5e73\u53f0\u9996\u9875' },
+        { src: `${B}works/quannongma/data-cockpit.jpg`, label: '\u5168\u519c\u7801\u5927\u6570\u636e\u9a7e\u9a76\u8231' },
+        { src: `${B}works/quannongma/map-overview.jpg`, label: '\u5168\u56fd\u8d4b\u7801\u5730\u56fe\u6982\u89c8' },
+        { src: `${B}works/quannongma/app-service.jpg`, label: '\u5e94\u7528\u670d\u52a1\u76d1\u63a7\u5e73\u53f0' },
+        { src: `${B}works/quannongma/data-resources.jpg`, label: '\u6570\u636e\u8d44\u6e90\u4f53\u7cfb' },
+        { src: `${B}works/quannongma/digital-identity.jpg`, label: '\u5173\u8054\u5206\u6790\u56fe\u8c31' },
+        { src: `${B}works/quannongma/gender-distribution.jpg`, label: '\u4eba\u5458\u57fa\u7840\u5e93\u6027\u522b\u5206\u5e03' },
+        { src: `${B}works/quannongma/data-source-analysis.jpg`, label: '\u4eba\u5458\u57fa\u7840\u5e93\u6570\u636e\u6765\u6e90\u5206\u6790' },
+        { src: `${B}works/quannongma/farm-analysis.jpg`, label: '\u5bb6\u5ead\u519c\u573a\u4e3b\u5173\u8054\u5206\u6790' },
+        { src: `${B}works/quannongma/data-governance.jpg`, label: '\u6570\u636e\u6cbb\u7406\u5e73\u53f0' },
       ],
     },
     {
@@ -253,7 +255,7 @@ function Projects() {
         '\u591a\u7ec8\u7aef\u8bbe\u8ba1\u4f53\u9a8c\u4e00\u81f4\u6027\uff0c\u786e\u4fdd\u54c1\u724c\u7edf\u4e00\u6027',
         '\u8bbe\u8ba1\u8d4b\u80fd\u653f\u52a1\u573a\u666f\uff0c\u63d0\u5347\u51b3\u7b56\u6548\u7387\u4e0e\u7528\u6237\u4f53\u9a8c',
       ],
-      img: '/works/tea-brain.jpg',
+      img: `${B}works/tea-brain.jpg`,
       color: '#1a4a2e',
     },
     {
@@ -269,7 +271,7 @@ function Projects() {
         '\u83b7\u4eba\u6c11\u65e5\u62a5\u3001\u65b0\u534e\u793e\u7b49\u4e3b\u6d41\u5a92\u4f53\u5e7f\u6cdb\u62a5\u9053',
         '\u8de8\u90e8\u95e8\u8bbe\u8ba1\u534f\u4f5c\uff0c\u786e\u4fdd\u591a\u7ec8\u7aef\u4f53\u9a8c\u4e00\u81f4\u6027',
       ],
-      img: '/works/zhemama.jpg',
+      img: `${B}works/zhemama.jpg`,
       color: '#5c3a1a',
     },
     {
@@ -285,7 +287,7 @@ function Projects() {
         '\u6539\u7248\u4e0a\u7ebf\u4e00\u4e2a\u6708\u540e\u516c\u53f8\u6210\u529f\u83b7\u5f97\u98ce\u9669\u6295\u8d44',
         '\u7ec4\u5efa UED \u56e2\u961f\uff0c\u63a8\u52a8\u8bbe\u8ba1\u6d41\u7a0b\u6807\u51c6\u5316',
       ],
-      img: '/works/tinghao.jpg',
+      img: `${B}works/tinghao.jpg`,
       color: '#3a1a5c',
     },
     {
@@ -301,7 +303,7 @@ function Projects() {
         '\u5efa\u7acb\u5b8c\u6574 UI \u8bbe\u8ba1\u89c4\u8303\u4f53\u7cfb\uff0c\u63d0\u5347\u56e2\u961f\u534f\u4f5c\u6548\u7387',
         '\u6df1\u5165\u7528\u6237\u7814\u7a76\u4e0e\u6570\u636e\u5206\u6790\u9a71\u52a8\u8bbe\u8ba1\u51b3\u7b56',
       ],
-      img: '/works/health.jpg',
+      img: `${B}works/health.jpg`,
       color: '#5c1a2a',
     },
     {
@@ -317,7 +319,7 @@ function Projects() {
         '\u6570\u636e\u9a71\u52a8\u7684\u8bbe\u8ba1\u8fed\u4ee3\uff0c\u6301\u7eed\u63d0\u5347\u8f6c\u5316\u7387',
         '\u53c2\u4e0e\u54c1\u724c\u5efa\u8bbe\u89c6\u89c9\u65b9\u6848\u5236\u5b9a',
       ],
-      img: '/works/christmas-poster.jpg',
+      img: `${B}works/christmas-poster.jpg`,
       color: '#2a4a3a',
     },
   ]
