@@ -35,7 +35,7 @@ export default function About() {
           {/* 身份卡：头像 + 联系方式 */}
           <Reveal className="about-id">
             <div className="about-avatar">
-              <img src="/images/avatar.png" alt={profile.name} />
+              <img src={`${import.meta.env.BASE_URL}images/avatar.png`} alt={profile.name} />
             </div>
             <div className="about-name">{profile.name}</div>
             <div className="about-role">{profile.role}</div>

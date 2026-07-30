@@ -56,7 +56,7 @@ export default function Nav() {
           <a className="nav-cta" href="#contact" onClick={handleNavClick}>
             联系我
           </a>
-          <a className="nav-download" href="/resume.pdf" download onClick={handleNavClick}>
+          <a className="nav-download" href={`${import.meta.env.BASE_URL}resume.pdf`} download onClick={handleNavClick}>
             <Download size={15} strokeWidth={2} />
             简历
           </a>
@@ -80,7 +80,7 @@ export default function Nav() {
             {l.label}
           </a>
         ))}
-        <a href="/resume.pdf" download onClick={handleNavClick}>
+        <a href={`${import.meta.env.BASE_URL}resume.pdf`} download onClick={handleNavClick}>
           下载简历
         </a>
       </div>

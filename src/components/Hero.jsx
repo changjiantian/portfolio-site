@@ -86,7 +86,7 @@ export default function Hero() {
               <span className="dot" />
               联系我
             </a>
-            <a className="cta-ghost cta-download" href="/resume.pdf" download>
+            <a className="cta-ghost cta-download" href={`${import.meta.env.BASE_URL}resume.pdf`} download>
               <Download size={17} strokeWidth={2.2} />
               下载简历
             </a>
@@ -116,7 +116,7 @@ export default function Hero() {
               <span className="lanyard-clip" aria-hidden="true" />
               <span className="id-chip">DESIGN LEAD</span>
               <div className="id-photo">
-                <img src="/images/avatar.png" alt={profile.name} draggable={false} />
+                <img src={`${import.meta.env.BASE_URL}images/avatar.png`} alt={profile.name} draggable={false} />
                 <div className="id-overlay">
                   <strong>
                     {profile.name}

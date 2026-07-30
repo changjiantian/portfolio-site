@@ -1,6 +1,7 @@
 /**
- * 生产构建脚本（编程 API 方式）。
- * 原因同 dev.mjs：沙箱拦截 esbuild bundle，绕开 CLI 的配置文件打包环节。
+ * 生产构建脚本（Vite 编程 API）。
+ * 使用 configFile:false + 内联配置，绕开沙箱对 vite.config.js 的 esbuild 打包挂起。
+ * 部署到 GitHub Pages 项目页时通过 GITHUB_PAGES=true 设置子路径 base。
  */
 import { build } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -8,22 +9,14 @@ import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const vendor = (f) => resolve(root, 'vendor', f)
+const base = process.env.GITHUB_PAGES === 'true' ? '/portfolio-site/' : '/'
 
 await build({
   root,
   configFile: false,
+  base,
   logLevel: 'info',
   plugins: [react()],
-  resolve: {
-    alias: [
-      { find: /^react\/jsx-dev-runtime$/, replacement: vendor('jsx-dev-runtime.mjs') },
-      { find: /^react\/jsx-runtime$/, replacement: vendor('react-jsx-runtime.mjs') },
-      { find: /^react-dom\/client$/, replacement: vendor('react-dom-client.mjs') },
-      { find: /^react-dom$/, replacement: vendor('react-dom.mjs') },
-      { find: /^react$/, replacement: vendor('react.mjs') },
-    ],
-  },
   build: {
     outDir: 'dist',
     assetsInlineLimit: 0,
