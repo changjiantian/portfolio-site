@@ -116,7 +116,7 @@ export default function Hero() {
               <span className="lanyard-clip" aria-hidden="true" />
               <span className="id-chip">DESIGN LEAD</span>
               <div className="id-photo">
-                <img src={`${import.meta.env.BASE_URL}images/avatar.png`} alt={profile.name} draggable={false} />
+                <img src={`${import.meta.env.BASE_URL}images/avatar.webp`} alt={profile.name} draggable={false} />
                 <div className="id-overlay">
                   <strong>
                     {profile.name}

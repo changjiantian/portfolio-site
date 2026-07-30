@@ -1,4 +1,7 @@
 // 个人信息与简历数据（源自 常传建-资深设计专家简历）
+// 资源路径统一走 import.meta.env.BASE_URL，兼容 GitHub Pages 子路径部署
+const ASSET_BASE = import.meta.env.BASE_URL
+const asset = (p) => ASSET_BASE + p.replace(/^\//, '')
 export const profile = {
   name: '常传建',
   nameEn: 'CHANG CHUANJIAN',
@@ -129,7 +132,7 @@ export const projects = [
     layout: 'stack',
     sizeLabel: '1920 × 1080',
     images: Array.from({ length: 11 }, (_, i) => ({
-      src: `/assets/projects/quannongma/qnm-${String(i + 1).padStart(2, '0')}.png`,
+      src: asset(`/assets/projects/quannongma/qnm-${String(i + 1).padStart(2, '0')}.webp`),
       w: 1920,
       h: 1080,
     })),
@@ -152,7 +155,7 @@ export const projects = [
     layout: 'stack',
     sizeLabel: '1920 × 1080',
     images: Array.from({ length: 8 }, (_, i) => ({
-      src: `/assets/projects/zhenongma/znm-${String(i + 1).padStart(2, '0')}.png`,
+      src: asset(`/assets/projects/zhenongma/znm-${String(i + 1).padStart(2, '0')}.webp`),
       w: 1920,
       h: 1080,
     })),
@@ -175,7 +178,7 @@ export const projects = [
     layout: 'stack',
     sizeLabel: '1920 × 1080',
     images: Array.from({ length: 12 }, (_, i) => ({
-      src: `/assets/projects/zhecha/zc-${String(i + 1).padStart(2, '0')}.png`,
+      src: asset(`/assets/projects/zhecha/zc-${String(i + 1).padStart(2, '0')}.webp`),
       w: 1920,
       h: 1080,
     })),
@@ -198,7 +201,7 @@ export const projects = [
     layout: 'stack',
     sizeLabel: '1920 × 1080',
     images: Array.from({ length: 7 }, (_, i) => ({
-      src: `/assets/projects/gpt/gpt-${String(i + 1).padStart(2, '0')}.png`,
+      src: asset(`/assets/projects/gpt/gpt-${String(i + 1).padStart(2, '0')}.webp`),
       w: 1920,
       h: 1080,
     })),
@@ -221,15 +224,15 @@ export const projects = [
     layout: 'masonry',
     sizeLabel: '1440 宽 · 长图',
     images: [
-      { src: '/assets/projects/tinghao-yezhu/yz-01.png', w: 1440, h: 810 },
-      { src: '/assets/projects/tinghao-yezhu/yz-02.png', w: 1440, h: 1561 },
-      { src: '/assets/projects/tinghao-yezhu/yz-03.png', w: 1440, h: 1920 },
-      { src: '/assets/projects/tinghao-yezhu/yz-04.png', w: 1440, h: 1475 },
-      { src: '/assets/projects/tinghao-yezhu/yz-05.png', w: 1440, h: 1377 },
-      { src: '/assets/projects/tinghao-yezhu/yz-06.png', w: 1440, h: 2218 },
-      { src: '/assets/projects/tinghao-yezhu/yz-07.png', w: 1440, h: 1495 },
-      { src: '/assets/projects/tinghao-yezhu/yz-08.png', w: 1440, h: 2585 },
-      { src: '/assets/projects/tinghao-yezhu/yz-09.png', w: 1440, h: 4823 },
+      { src: asset('/assets/projects/tinghao-yezhu/yz-01.webp'), w: 1440, h: 810 },
+      { src: asset('/assets/projects/tinghao-yezhu/yz-02.webp'), w: 1440, h: 1561 },
+      { src: asset('/assets/projects/tinghao-yezhu/yz-03.webp'), w: 1440, h: 1920 },
+      { src: asset('/assets/projects/tinghao-yezhu/yz-04.webp'), w: 1440, h: 1475 },
+      { src: asset('/assets/projects/tinghao-yezhu/yz-05.webp'), w: 1440, h: 1377 },
+      { src: asset('/assets/projects/tinghao-yezhu/yz-06.webp'), w: 1440, h: 2218 },
+      { src: asset('/assets/projects/tinghao-yezhu/yz-07.webp'), w: 1440, h: 1495 },
+      { src: asset('/assets/projects/tinghao-yezhu/yz-08.webp'), w: 1440, h: 2585 },
+      { src: asset('/assets/projects/tinghao-yezhu/yz-09.webp'), w: 1440, h: 4823 },
     ],
   },
   {
@@ -250,11 +253,11 @@ export const projects = [
     layout: 'masonry',
     sizeLabel: '1440 宽 · 长图',
     images: [
-      { src: '/assets/projects/tinghao-gongzhang/gz-01.png', w: 1440, h: 810 },
-      { src: '/assets/projects/tinghao-gongzhang/gz-02.png', w: 1440, h: 1561 },
-      { src: '/assets/projects/tinghao-gongzhang/gz-03.png', w: 1440, h: 1344 },
-      { src: '/assets/projects/tinghao-gongzhang/gz-04.png', w: 1440, h: 926 },
-      { src: '/assets/projects/tinghao-gongzhang/gz-05.png', w: 1440, h: 3558 },
+      { src: asset('/assets/projects/tinghao-gongzhang/gz-01.webp'), w: 1440, h: 810 },
+      { src: asset('/assets/projects/tinghao-gongzhang/gz-02.webp'), w: 1440, h: 1561 },
+      { src: asset('/assets/projects/tinghao-gongzhang/gz-03.webp'), w: 1440, h: 1344 },
+      { src: asset('/assets/projects/tinghao-gongzhang/gz-04.webp'), w: 1440, h: 926 },
+      { src: asset('/assets/projects/tinghao-gongzhang/gz-05.webp'), w: 1440, h: 3558 },
     ],
   },
   {
@@ -275,10 +278,10 @@ export const projects = [
     layout: 'masonry',
     sizeLabel: '混合尺寸',
     images: [
-      { src: '/assets/projects/tinghao/th-01.png', w: 586, h: 384 },
-      { src: '/assets/projects/tinghao/th-02.png', w: 586, h: 384 },
-      { src: '/assets/projects/tinghao/th-03.png', w: 586, h: 460 },
-      { src: '/assets/projects/tinghao/th-04.png', w: 711, h: 1983 },
+      { src: asset('/assets/projects/tinghao/th-01.webp'), w: 586, h: 384 },
+      { src: asset('/assets/projects/tinghao/th-02.webp'), w: 586, h: 384 },
+      { src: asset('/assets/projects/tinghao/th-03.webp'), w: 586, h: 460 },
+      { src: asset('/assets/projects/tinghao/th-04.webp'), w: 711, h: 1983 },
     ],
   },
   {
@@ -299,19 +302,19 @@ export const projects = [
     layout: 'masonry',
     sizeLabel: '混合尺寸',
     images: [
-      { src: '/assets/projects/pingmian/pm-01.png', w: 2880, h: 1620 },
-      { src: '/assets/projects/pingmian/pm-02.png', w: 2880, h: 1620 },
-      { src: '/assets/projects/pingmian/pm-03.png', w: 2880, h: 1765 },
-      { src: '/assets/projects/pingmian/pm-04.png', w: 1920, h: 1080 },
-      { src: '/assets/projects/pingmian/pm-05.png', w: 1920, h: 1080 },
-      { src: '/assets/projects/pingmian/pm-06.png', w: 1920, h: 1080 },
-      { src: '/assets/projects/pingmian/pm-07.png', w: 2538, h: 1428 },
-      { src: '/assets/projects/pingmian/pm-08.png', w: 2538, h: 1428 },
-      { src: '/assets/projects/pingmian/pm-09.png', w: 1250, h: 1874 },
-      { src: '/assets/projects/pingmian/pm-10.png', w: 1250, h: 1874 },
-      { src: '/assets/projects/pingmian/pm-11.png', w: 1250, h: 1874 },
-      { src: '/assets/projects/pingmian/pm-12.png', w: 1250, h: 1874 },
-      { src: '/assets/projects/pingmian/pm-13.png', w: 2538, h: 1428 },
+      { src: asset('/assets/projects/pingmian/pm-01.webp'), w: 2880, h: 1620 },
+      { src: asset('/assets/projects/pingmian/pm-02.webp'), w: 2880, h: 1620 },
+      { src: asset('/assets/projects/pingmian/pm-03.webp'), w: 2880, h: 1765 },
+      { src: asset('/assets/projects/pingmian/pm-04.webp'), w: 1920, h: 1080 },
+      { src: asset('/assets/projects/pingmian/pm-05.webp'), w: 1920, h: 1080 },
+      { src: asset('/assets/projects/pingmian/pm-06.webp'), w: 1920, h: 1080 },
+      { src: asset('/assets/projects/pingmian/pm-07.webp'), w: 2538, h: 1428 },
+      { src: asset('/assets/projects/pingmian/pm-08.webp'), w: 2538, h: 1428 },
+      { src: asset('/assets/projects/pingmian/pm-09.webp'), w: 1250, h: 1874 },
+      { src: asset('/assets/projects/pingmian/pm-10.webp'), w: 1250, h: 1874 },
+      { src: asset('/assets/projects/pingmian/pm-11.webp'), w: 1250, h: 1874 },
+      { src: asset('/assets/projects/pingmian/pm-12.webp'), w: 1250, h: 1874 },
+      { src: asset('/assets/projects/pingmian/pm-13.webp'), w: 2538, h: 1428 },
     ],
   },
 ]
