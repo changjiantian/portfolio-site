@@ -37,8 +37,9 @@ npm run preview  # 本地预览构建产物
 
 部署在 GitHub Pages：**https://changjiantian.github.io/portfolio-site/**
 
-推送 `main` 分支即触发 GitHub Actions 自动构建并发布（详见 `.github/workflows/deploy.yml`）。
-部署到项目子路径 `/portfolio-site/`，由 `GITHUB_PAGES=true` 控制 `base`。
+站点由 `gh-pages` 分支发布；构建产物通过 `GITHUB_PAGES=true npm run build` 生成，
+并部署到项目子路径 `/portfolio-site/`（`base` 由该环境变量控制，开发与本地预览时为 `/`）。
+仓库内置 `.github/workflows/deploy.yml` 工作流，如需改用 GitHub Actions 自动部署可启用它。
 
 ## 📁 目录结构
 
